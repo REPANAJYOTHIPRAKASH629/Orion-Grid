@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Live Stream</title>
+</head>
+<body>
+  <h1>Teacher's Live Stream</h1>
+  <button id="start">Start Streaming</button>
+  <video id="teacherVideo" autoplay muted></video>
+
+  <script>
+    const startButton = document.getElementById("start");
+    const videoElement = document.getElementById("teacherVideo");
+    const peerConnection = new RTCPeerConnection();
+
+    startButton.addEventListener("click", async () => {
+      // Start screen capture
+      const stream = await navigator.mediaDevices.getDisplayMedia({ video: true });
+      videoElement.srcObject = stream;
+
+      // Add the screen stream to the WebRTC peer connection
+      stream.getTracks().forEach((track) => peerConnection.addTrack(track, stream));
+
+      // Send the WebRTC offer to the server
+      const offer = await peerConnection.createOffer();
+      await peerConnection.setLocalDescription(offer);
+
+      fetch("/offer", {
+        method: "POST",
+        body: JSON.stringify({ offer }),
+        headers: { "Content-Type": "application/json" },
+      });
+    });
+  </script>
+</body>
+</html>

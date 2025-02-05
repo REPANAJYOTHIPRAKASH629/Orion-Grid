@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java Programming Curriculum</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom Styles for Interactive Module Cards */
+        .module-card {
+            border: 1px solid #e5e7eb;
+            border-radius: 8px;
+            padding: 1.5rem;
+            background-color: #ffffff;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .module-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .highlight-text {
+            color: #0065BD;
+            font-weight: 600;
+        }
+
+        .section-title {
+            border-bottom: 2px solid #0065BD;
+            padding-bottom: 0.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .outcomes-list li,
+        .syllabus-list li {
+            margin-bottom: 0.5rem;
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Outfit', sans-serif;
+                }
+
+                h1, h2, h3, h4 {
+                    font-family: 'Outfit', sans-serif;
+                }
+    </style>
+</head>
+
+<body class="bg-gray-100 text-gray-800">
+
+    <div class="max-w-4xl mx-auto p-6">
+
+        <!-- Buttons for Syllabus and Outcomes -->
+        <div class="mb-6 flex justify-center space-x-6">
+            <button id="syllabus-btn" class="px-6 py-3 bg-[#0065BD] text-white rounded-md shadow-lg hover:bg-[#0052a3] transition duration-300">Syllabus</button>
+            <button id="outcomes-btn" class="px-6 py-3 bg-[#EE1C25] text-white rounded-md shadow-lg hover:bg-[#c91920] transition duration-300">Outcomes</button>
+        </div>
+
+        <!-- Content for Syllabus -->
+        <div id="syllabus-content" class="space-y-8">
+            <h2 class="text-2xl font-semibold mb-4 text-center section-title text-[#0065BD]">Java Programming Syllabus</h2>
+
+            <div class="space-y-6">
+                <!-- Module 1 -->
+                <div class="module-card">
+                    <h3 class="text-xl font-semibold text-[#0065BD]">Module 1: Introduction to Java</h3>
+                    <ul class="syllabus-list list-disc pl-5">
+                        <li>Why Java? What? How? When? Where?</li>
+                        <li>Different Java Versions</li>
+                        <li>How Java Differs from Other Technologies</li>
+                    </ul>
+                </div>
+
+                <!-- Module 2 -->
+                <div class="module-card">
+                    <h3 class="text-xl font-semibold text-[#0065BD]">Module 2: Introduction to Java Programming Environment</h3>
+                    <ul class="syllabus-list list-disc pl-5">
+                        <li>Installation & Setup</li>
+                        <li>Compiling & Executing Java Programs</li>
+                        <li>Platform Independence</li>
+                        <li>Java Technology Overview (JDK, JRE, JVM, JIT)</li>
+                        <li>Features of Java</li>
+                        <li>Text Editors & Consoles</li>
+                    </ul>
+                </div>
+
+                <!-- Module 3 -->
+                <div class="module-card">
+                    <h3 class="text-xl font-semibold text-[#0065BD]">Module 3: Fundamentals of Java Programming</h3>
+                    <ul class="syllabus-list list-disc pl-5">
+                        <li>Naming Conventions</li>
+                        <li>Comments and Statements</li>
+                        <li>Code Blocks (Static, Non-static)</li>
+                        <li>Identifiers, Keywords, Literals</li>
+                        <li>Primitive & Reference Data Types</li>
+                        <li>Variables (Primitive, Reference)</li>
+                        <li>Type Casting, Default Value</li>
+                        <li>Operators</li>
+                    </ul>
+                </div>
+
+                <!-- Module 4 -->
+                <div class="module-card">
+                    <h3 class="text-xl font-semibold text-[#0065BD]">Module 4: Control Structures</h3>
+                    <ul class="syllabus-list list-disc pl-5">
+                        <li>Working with Control Structures</li>
+                        <li>Decision Control Structures (if, if-else, switch-case)</li>
+                        <li>Repetition Control Structures (while, for, do-while)</li>
+                    </ul>
+                </div>
+
+                <!-- Module 5 -->
+                <div class="module-card">
+                    <h3 class="text-xl font-semibold text-[#0065BD]">Module 5: Input Fundamentals and Data Types in Java</h3>
+                    <ul class="syllabus-list list-disc pl-5">
+                        <li>Java Program Inputs from Keyboard (Scanner, BufferedReader)</li>
+                        <li>Java Array Instantiation and Manipulation</li>
+                        <li>String vs. Character Array</li>
+                        <li>Multi-Dimensional Arrays</li>
+                        <li>Array Index Out of Bounds Exception</li>
+                    </ul>
+                </div>
+
+                <!-- Module 6 -->
+                <div class="module-card">
+                    <h3 class="text-xl font-semibold text-[#0065BD]">Module 6: Object-Oriented Programming (OOP Concepts)</h3>
+                    <ul class="syllabus-list list-disc pl-5">
+                        <li>Procedural Vs Object-Oriented Programming</li>
+                        <li>Introduction to OOP: Abstraction, Encapsulation, Inheritance, Polymorphism</li>
+                        <li>Classes, Objects, Constructors, Methods</li>
+                        <li>Access Modifiers and Specifiers</li>
+                        <li>Call by Value vs. Call by Reference</li>
+                    </ul>
+                </div>
+
+                <!-- Module 7 -->
+                <div class="module-card">
+                    <h3 class="text-xl font-semibold text-[#0065BD]">Module 7: Command-Line Arguments</h3>
+                    <ul class="syllabus-list list-disc pl-5">
+                        <li>What are Command-Line Arguments?</li>
+                        <li>Conversion and Parsing of Arguments</li>
+                    </ul>
+                </div>
+
+                <!-- Module 8 -->
+                <div class="module-card">
+                    <h3 class="text-xl font-semibold text-[#0065BD]">Module 8: Integrated Development Environment</h3>
+                    <ul class="syllabus-list list-disc pl-5">
+                        <li>Using Editors and IDEs like IntelliJ IDEA</li>
+                        <li>Project Setup and Compilation</li>
+                    </ul>
+                </div>
+
+                <!-- Module 9 -->
+                <div class="module-card">
+                    <h3 class="text-xl font-semibold text-[#0065BD]">Module 9: Inner Classes</h3>
+                    <ul class="syllabus-list list-disc pl-5">
+                        <li>Introduction to Inner Classes</li>
+                        <li>Static vs Non-static Inner Classes</li>
+                    </ul>
+                </div>
+
+                <!-- Module 10 -->
+                <div class="module-card">
+                    <h3 class="text-xl font-semibold text-[#0065BD]">Module 10: Inheritance</h3>
+                    <ul class="syllabus-list list-disc pl-5">
+                        <li>Concepts of Inheritance</li>
+                        <li>Constructor Calling Chain</li>
+                        <li>The `super` Keyword</li>
+                        <li>Reference Casting</li>
+                    </ul>
+                </div>
+
+                <!-- Module 11 -->
+                <div class="module-card">
+                    <h3 class="text-xl font-semibold text-[#0065BD]">Module 11: Abstract Classes and Interfaces</h3>
+                    <ul class="syllabus-list list-disc pl-5">
+                        <li>Abstract Methods and Classes</li>
+                        <li>Interface vs Abstract Classes</li>
+                        <li>Multiple Interface Implementation</li>
+                    </ul>
+                </div>
+
+                <!-- Module 12 -->
+                <div class="module-card">
+                    <h3 class="text-xl font-semibold text-[#0065BD]">Module 12: Polymorphism</h3>
+                    <ul class="syllabus-list list-disc pl-5">
+                        <li>Types of Polymorphism: Overloading, Overriding, Hiding</li>
+                        <li>Final Classes and Methods</li>
+                        <li>Benefits of Polymorphism</li>
+                    </ul>
+                </div>
+
+                <!-- Module 13 -->
+                <div class="module-card">
+                    <h3 class="text-xl font-semibold text-[#0065BD]">Module 13: Packages</h3>
+                    <ul class="syllabus-list list-disc pl-5">
+                        <li>Package Creation and Use</li>
+                        <li>Classpath and Importing Classes</li>
+                        <li>Namespace Management</li>
+                    </ul>
+                </div>
+
+                <!-- Module 14 -->
+                <div class="module-card">
+                    <h3 class="text-xl font-semibold text-[#0065BD]">Module 14: Using Predefined Packages & Other Classes</h3>
+                    <ul class="syllabus-list list-disc pl-5">
+                        <li>Wrapper Classes and Math Class</li>
+                        <li>String, StringBuffer, StringBuilder Operations</li>
+                        <li>System Class and Object Class Methods</li>
+                    </ul>
+                </div>
+
+                <!-- Module 15 -->
+                <div class="module-card">
+                    <h3 class="text-xl font-semibold text-[#0065BD]">Module 15: New Concepts in Package</h3>
+                    <ul class="syllabus-list list-disc pl-5">
+                        <li>Autoboxing, Enum, Static Import</li>
+                        <li>Working with JAR Files</li>
+                    </ul>
+                </div>
+
+                <!-- Module 16 -->
+                <div class="module-card">
+                    <h3 class="text-xl font-semibold text-[#0065BD]">Module 16: Garbage Collection</h3>
+                    <ul class="syllabus-list list-disc pl-5">
+                        <li>Garbage Collection Introduction</li>
+                        <li>Advantages of Garbage Collection</li>
+                    </ul>
+                </div>
+
+                <!-- Module 17 -->
+                <div class="module-card">
+                    <h3 class="text-xl font-semibold text-[#0065BD]">Module 17: Exception Handling</h3>
+                    <ul class="syllabus-list list-disc pl-5">
+                        <li>Try-Catch-Finally Blocks</li>
+                        <li>Checked & Unchecked Exceptions</li>
+                        <li>Custom Exceptions and Chained Exceptions</li>
+                    </ul>
+                </div>
+
+                <!-- Module 18 -->
+                <div class="module-card">
+                    <h3 class="text-xl font-semibold text-[#0065BD]">Module 18: Multithreading</h3>
+                    <ul class="syllabus-list list-disc pl-5">
+                        <li>Creating Threads, Thread States</li>
+                        <li>Synchronization and Deadlock Prevention</li>
+                    </ul>
+                </div>
+
+                <!-- Module 19 -->
+                <div class="module-card">
+                    <h3 class="text-xl font-semibold text-[#0065BD]">Module 19: Input and Output Streams</h3>
+                    <ul class="syllabus-list list-disc pl-5">
+                        <li>File Handling and Stream Classes</li>
+                        <li>Reading and Writing Files</li>
+                    </ul>
+                </div>
+
+                <!-- Module 20 -->
+                <div class="module-card">
+                    <h3 class="text-xl font-semibold text-[#0065BD]">Module 20: Serialization</h3>
+                    <ul class="syllabus-list list-disc pl-5">
+                        <li>Introduction to Serialization</li>
+                        <li>Object Streams and Transient Keyword</li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Content for Outcomes -->
+        <div id="outcomes-content" class="hidden space-y-6">
+            <h2 class="text-2xl font-semibold mb-4 text-center section-title text-[#0065BD]">Course Completion Outcomes</h2>
+
+            <div class="space-y-6">
+                <!-- Skills Gained -->
+                <div class="module-card">
+                    <p class="text-[#0065BD] font-semibold"><strong>Skills Gained:</strong></p>
+                    <ul class="list-disc pl-5 space-y-2">
+                        <li>Mastery of Java Programming Language and Object-Oriented Concepts (OOP)</li>
+                        <li>Proficiency in Java development tools, IDEs, and debugging techniques</li>
+                        <li>Hands-on experience with exception handling, multithreading, and concurrency</li>
+                        <li>Ability to create and maintain large-scale, real-world Java applications</li>
+                        <li>Understanding of memory management and garbage collection in Java</li>
+                        <li>Experience in building applications using core Java libraries like collections, I/O streams, and more</li>
+                        <li>In-depth knowledge of Java's platform independence and cross-platform capabilities</li>
+                        <li>Strong understanding of modern software development methodologies and best practices</li>
+                        <li>Building and managing Java-based web and enterprise applications using frameworks (e.g., Spring, Hibernate)</li>
+                        <li>Design and implementation of efficient data structures and algorithms in Java</li>
+                    </ul>
+                </div>
+
+                <!-- Job Opportunities -->
+                <div class="module-card">
+                    <p class="text-[#0065BD] font-semibold"><strong>Job Opportunities:</strong></p>
+                    <ul class="list-disc pl-5 space-y-2">
+                        <li>Java Developer</li>
+                        <li>Software Engineer</li>
+                        <li>Backend Developer</li>
+                        <li>Android Developer</li>
+                        <li>Full-Stack Developer</li>
+                        <li>Enterprise Application Developer</li>
+                        <li>System Architect</li>
+                        <li>Cloud Developer</li>
+                        <li>DevOps Engineer</li>
+                        <li>Machine Learning Engineer (with further specialization)</li>
+                        <li>Database Developer (using Java-based solutions)</li>
+                        <li>Java Web Developer</li>
+                    </ul>
+                </div>
+
+                <!-- Additional Career Paths -->
+                <div class="module-card">
+                    <p class="text-[#0065BD] font-semibold"><strong>Additional Career Paths:</strong></p>
+                    <ul class="list-disc pl-5 space-y-2">
+                        <li><strong>Android Developer:</strong> Leverage Java to build native Android apps for millions of users worldwide.</li>
+                        <li><strong>Cloud Developer:</strong> Utilize Java to build scalable cloud-based applications for enterprise solutions (e.g., AWS, Azure, Google Cloud).</li>
+                        <li><strong>Big Data Developer:</strong> Work with big data technologies like Hadoop, Spark, and Kafka in Java.</li>
+                        <li><strong>Machine Learning Engineer:</strong> Use Java to implement machine learning algorithms, AI applications, and data analytics systems.</li>
+                        <li><strong>Game Developer:</strong> Use Java to develop 2D and 3D games with frameworks like libGDX or JMonkeyEngine.</li>
+                    </ul>
+                </div>
+
+                <!-- Additional Benefits of Learning Java -->
+                <div class="module-card">
+                    <p class="text-[#0065BD] font-semibold"><strong>Additional Benefits of Learning Java:</strong></p>
+                    <ul class="list-disc pl-5 space-y-2">
+                        <li>Java is one of the most popular and in-demand programming languages worldwide, ensuring job stability.</li>
+                        <li>Large community support, extensive documentation, and vast resources available for learning.</li>
+                        <li>Highly versatile language used in a variety of industries, from banking and finance to healthcare and e-commerce.</li>
+                        <li>As Java is consistently updated, learning Java ensures you are at the forefront of technology.</li>
+                    </ul>
+                </div>
+
+                <!-- Projects You Can Build -->
+                <div class="module-card">
+                    <p class="text-[#0065BD] font-semibold"><strong>Projects You Can Build:</strong></p>
+                    <ul class="list-disc pl-5 space-y-2">
+                        <li><strong>Java-based Web Applications:</strong> Develop a complete e-commerce site with a backend powered by Java (using frameworks like Spring Boot or Java EE).</li>
+                        <li><strong>Android Applications:</strong> Build fully functional mobile applications for Android with Java.</li>
+                        <li><strong>Real-time Chat Application:</strong> Develop a real-time chat app using Java with sockets or Spring WebSocket for communication.</li>
+                        <li><strong>Employee Management System:</strong> Create a database-driven employee management system using Java, JPA, and Spring Data.</li>
+                        <li><strong>Java-based Game Development:</strong> Build a simple 2D game like Tic-Tac-Toe, Snake, or a more complex game using game development libraries.</li>
+                        <li><strong>Financial Calculator:</strong> Build a financial calculator application with Java that includes various formulas (e.g., loan calculator, compound interest, etc.).</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+
+    <script>
+        // Toggle visibility of Syllabus and Outcomes sections
+        document.getElementById("syllabus-btn").addEventListener("click", function () {
+            document.getElementById("syllabus-content").classList.remove("hidden");
+            document.getElementById("outcomes-content").classList.add("hidden");
+        });
+
+        document.getElementById("outcomes-btn").addEventListener("click", function () {
+            document.getElementById("outcomes-content").classList.remove("hidden");
+            document.getElementById("syllabus-content").classList.add("hidden");
+        });
+    </script>
+
+</body>
+
+</html>

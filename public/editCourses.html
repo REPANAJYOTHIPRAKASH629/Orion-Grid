@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Courses</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100 p-6">
+    <div class="max-w-6xl mx-auto bg-white p-6 rounded-lg shadow-lg">
+        <h2 class="text-2xl font-semibold text-center mb-6">Manage Courses</h2>
+        <table class="w-full border-collapse border border-gray-300">
+            <thead>
+                <tr class="bg-gray-200">
+                    <th class="border border-gray-300 px-4 py-2">ID</th>
+                    <th class="border border-gray-300 px-4 py-2">Image</th>
+                    <th class="border border-gray-300 px-4 py-2">Branch</th>
+                    <th class="border border-gray-300 px-4 py-2">Description</th>
+                    <th class="border border-gray-300 px-4 py-2">Syllabus</th>
+                    <th class="border border-gray-300 px-4 py-2">Price</th>
+                    <th class="border border-gray-300 px-4 py-2">Actions</th>
+                </tr>
+            </thead>
+            <tbody id="coursesTable">
+                <!-- Data will be inserted here dynamically -->
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Hidden file input for image upload -->
+    <input type="file" id="imageUpload" accept="image/*" style="display: none;" onchange="uploadImage()">
+
+    <script>
+        async function fetchCourses() {
+            const response = await fetch("/api/editcourses");
+            const courses = await response.json();
+            const tableBody = document.getElementById("coursesTable");
+            tableBody.innerHTML = "";
+
+            courses.forEach(course => {
+                const row = document.createElement("tr");
+                row.innerHTML = `
+                    <td class="border px-4 py-2">${course.id}</td>
+                    <td class="border px-4 py-2"><img src="/courses/${course.branch}/${course.id}.jpg" width="50"></td>
+                    <td class="border px-4 py-2">${course.branch}</td>
+                    <td class="border px-4 py-2">${course.description}</td>
+                    <td class="border px-4 py-2"><a href="${course.syllabus}" target="_blank">View</a></td>
+                    <td class="border px-4 py-2">${course.price}</td>
+                    <td class="border px-4 py-2">
+                        <button onclick="editCourse(${course.id})" class="bg-blue-500 text-white px-3 py-1 rounded">Edit</button>
+                        <button onclick="changeImage(${course.id})" class="bg-green-500 text-white px-3 py-1 rounded">Change Image</button>
+                        <button onclick="deleteCourse(${course.id})" class="bg-red-500 text-white px-3 py-1 rounded">Delete</button>
+                    </td>
+                `;
+                tableBody.appendChild(row);
+            });
+        }
+
+        async function deleteCourse(id) {
+            if (confirm("Are you sure you want to delete this course?")) {
+                await fetch(`/api/courses/${id}`, { method: "DELETE" });
+                fetchCourses();
+            }
+        }
+
+        async function editCourse(id) {
+            const newPrice = prompt("Enter new price:");
+            if (newPrice) {
+                await fetch(`/api/courses/${id}`, {
+                    method: "PUT",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify({ price: newPrice })
+                });
+                fetchCourses();
+            }
+        }
+
+        let selectedCourseId = null;
+
+        function changeImage(id) {
+            selectedCourseId = id;
+            document.getElementById("imageUpload").click();
+        }
+
+        async function uploadImage() {
+            const fileInput = document.getElementById("imageUpload");
+            if (fileInput.files.length === 0) return;
+
+            const formData = new FormData();
+            formData.append("image", fileInput.files[0]);
+
+            await fetch(`/api/courses/${selectedCourseId}/image`, {
+                method: "PUT",
+                body: formData
+            });
+
+            fetchCourses();
+        }
+
+        fetchCourses();
+    </script>
+</body>
+</html>

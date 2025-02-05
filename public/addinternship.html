@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Internship</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        .bg-primary {
+            background-color: #EE1C25;
+        }
+        .text-primary {
+            color: #EE1C25;
+        }
+        .bg-secondary {
+            background-color: #0065BD;
+        }
+        .text-secondary {
+            color: #0065BD;
+        }
+        .btn-primary {
+            background-color: #EE1C25;
+        }
+        .btn-primary:hover {
+            background-color: #d81c21;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 bg-cover bg-center bg-gradient-to-r from-purple-400 via-pink-500 to-red-500" style="background-image: url('https://t4.ftcdn.net/jpg/05/12/20/21/360_F_512202172_jfpZFlxHVmbpgzj53AfESns0UBrIv2Wd.jpg');">
+    <header class="bg-primary text-white p-4">
+        <h1 class="text-2xl">Add New Internship</h1>
+    </header>
+    <main class="p-6">
+        <div class="max-w-4xl mx-auto bg-white shadow-md rounded-lg p-6">
+            <h2 class="text-secondary text-xl mb-6 text-center">Create a New Internship</h2>
+            <form action="/api/interns/add/NewInternship" method="POST" enctype="multipart/form-data">
+                <!-- Image Upload -->
+                <div class="mb-4">
+                    <label for="image" class="block text-gray-700 text-sm font-medium mb-2">Upload Internship Image</label>
+                    <input type="file" id="image" name="image" class="w-full px-4 py-2 border rounded-lg border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary">
+                </div>
+
+                <!-- Title -->
+                <div class="mb-4">
+                    <label for="title" class="block text-gray-700 text-sm font-medium mb-2">Internship Title</label>
+                    <input type="text" id="title" name="title" placeholder="Enter internship title" class="w-full px-4 py-2 border rounded-lg border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary">
+                </div>
+
+                <!-- Syllabus Link -->
+                <div class="mb-4">
+                    <label for="syllabus" class="block text-gray-700 text-sm font-medium mb-2">Internship Syllabus link</label>
+                    <input type="text" id="syllabus" name="syllabus" placeholder="Enter internship syllabus link" class="w-full px-4 py-2 border rounded-lg border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary">
+                </div>
+
+                <!-- Branch -->
+                <div class="mb-4">
+                    <label for="branch" class="block text-gray-700 text-sm font-medium mb-2">Choose Branch</label>
+                    <select name="branch" id="branch">
+                        <option value="cse">CSE</option>
+                        <option value="ece">ECE</option>
+                        <option value="iot">IOT</option>
+                    </select>
+                </div>
+
+                <div class="mb-4">
+                    <label for="monthOne" class="block text-gray-700 text-sm font-medium mb-2">Duration (1 Month)</label>
+                    <input type="text" id="monthOne" name="monthOne" class="w-full px-4 py-2 border rounded-lg">
+                </div>
+            
+                <div class="mb-4">
+                    <label for="monthTwo" class="block text-gray-700 text-sm font-medium mb-2">Duration (2 Months)</label>
+                    <input type="text" id="monthTwo" name="monthTwo" class="w-full px-4 py-2 border rounded-lg">
+                </div>
+            
+                <div class="mb-4">
+                    <label for="monthThree" class="block text-gray-700 text-sm font-medium mb-2">Duration (3 Months)</label>
+                    <input type="text" id="monthThree" name="monthThree" class="w-full px-4 py-2 border rounded-lg">
+                </div>
+
+                <!-- Details -->
+                <div class="mb-6">
+                    <label for="details" class="block text-gray-700 text-sm font-medium mb-2">Internship Description</label>
+                    <textarea id="details" name="description" rows="5" placeholder="Enter internship details..." class="w-full px-4 py-2 border rounded-lg border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary"></textarea>
+                </div>
+
+                <!-- Submit Button -->
+                <div class="text-center">
+                    <button type="submit" class="btn-primary text-white py-2 px-6 rounded-lg text-lg hover:bg-red-600 focus:ring-2 focus:ring-red-400 transition duration-300">Submit Internship</button>
+                </div>
+            </form>
+        </div>
+    </main>
+</body>
+</html>
