@@ -4,6 +4,10 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
+public/images/courses/*.jpg
+public/images/internships/*.jpg
+public/images/workshops/*.jpg
+public/images/projects/*.jpg
 # Environment variables
 .env
 .env.local
