@@ -1,0 +1,57 @@
+# Node.js dependencies
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# Logs
+logs
+*.log
+logs/
+debug.log
+error.log
+npm-debug.log
+yarn-debug.log
+pnpm-debug.log
+
+# Build artifacts
+dist/
+build/
+.out/
+.next/
+.vercel/
+.netlify/
+
+# Cache
+.cache/
+.nyc_output/
+coverage/
+.vscode/
+
+# Temporary files
+tmp/
+temp/
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Editor-specific files
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Docker
+docker-compose.override.yml
+
+# Firebase
+.firebase/
+
+# Other
+public/uploads/
