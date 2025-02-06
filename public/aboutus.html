@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us - Technical Experts Coaching Center</title>
+    <title>Orion Grid</title>
+    <link rel="icon" href="/frontend/images/logo.jpg" type="image/x-icon">
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap" rel="stylesheet">
     <style>
@@ -15,15 +16,37 @@
                     font-family: 'Outfit', sans-serif;
                 }
     </style>
+    <style>
+        /* Disable text selection */
+        body {
+            user-select: none;
+            -webkit-user-select: none; /* Safari */
+            -moz-user-select: none;    /* Firefox */
+        }
+    </style>
+     <script>
+        // Disable right-click context menu
+        document.addEventListener('contextmenu', function(event) {
+            event.preventDefault();
+        });
+    </script>
+    <script>
+        // Disable Ctrl + U (View Source) and Ctrl + Shift + I (Dev Tools)
+        document.addEventListener('keydown', function(event) {
+          if ((event.ctrlKey && event.key === 'u') || (event.ctrlKey && event.shiftKey && event.key === 'I')) {
+            event.preventDefault();
+          }
+        });
+      </script>
 </head>
-<body class="text-gray-800">
+<body class="text-gray-800" style="background-image: url('https://img.freepik.com/premium-vector/technology-connection-digital-data-white-background_32996-546.jpg?semt=ais_hybrid'); background-size: cover; background-position: center; background-repeat: no-repeat;">
 
     <!-- Navbar -->
     <nav class="text-[#EE1C25] py-2 px-4 md:px-8 ">
         <div class="flex justify-between items-center">
             <!-- Logo -->
             <div class="flex-shrink-0">
-                <img src="./images/logo.jpg" alt="Orion Grid Logo" class="w-32 md:w-48 h-auto object-contain">
+                <img src="/frontend/images/logo.jpg" alt="Orion Grid Logo" class="w-32 md:w-48 h-auto object-contain">
             </div>
     
             <!-- Navbar Links -->
@@ -35,16 +58,16 @@
                     <a href="#" class="hover:text-[#EE1C25]"><strong>Services</strong></a>
                     <!-- Submenu (Hidden by default) -->
                     <div class="absolute left-0 mt-0 hidden bg-white text-[#0065BD] rounded-lg shadow-lg group-hover:block group-focus-within:block transition-opacity duration-300 ease-in-out" id="services-dropdown">
-                        <a href="./courses.html" class="block px-4 py-2 hover:bg-[#EE1C25] hover:text-white">Courses</a>
-                        <a href="./internships.html" class="block px-4 py-2 hover:bg-[#EE1C25] hover:text-white">Internships</a>
-                        <a href="./projects.html" class="block px-4 py-2 hover:bg-[#EE1C25] hover:text-white">Projects</a>
-                        <a href="./workshops.html" class="block px-4 py-2 hover:bg-[#EE1C25] hover:text-white">Workshops</a>
+                        <a href="/frontend/courses.html" class="block px-4 py-2 hover:bg-[#EE1C25] hover:text-white">Courses</a>
+                        <a href="/frontend/internships.html" class="block px-4 py-2 hover:bg-[#EE1C25] hover:text-white">Internships</a>
+                        <a href="/frontend/projects.html" class="block px-4 py-2 hover:bg-[#EE1C25] hover:text-white">Projects</a>
+                        <a href="/frontend/workshops.html" class="block px-4 py-2 hover:bg-[#EE1C25] hover:text-white">Workshops</a>
                         <a href="#" class="block px-4 py-2 hover:bg-[#EE1C25] hover:text-white">Research</a>
                     </div>
                 </div>
     
-                <a href="./aboutus.html" class="hover:text-[#EE1C25]"><strong>About Us</strong></a>
-                <a href="./careers.html" class="hover:text-[#EE1C25]"><strong>Careers</strong></a>
+                <a href="/frontend/aboutus.html" class="hover:text-[#EE1C25]"><strong>About Us</strong></a>
+                <a href="/frontend/careers.html" class="hover:text-[#EE1C25]"><strong>Careers</strong></a>
                 <a href="#" class="hover:text-[#EE1C25]"><strong>My Learnings</strong></a>
             </div>
     
@@ -68,7 +91,7 @@
             <div class="relative" id="mobile-services-dropdown">
                 <button class="block text-lg hover:text-[#EE1C25]" id="mobile-services-button">Services</button>
                 <div class="absolute left-0 mt-2 hidden bg-white text-black rounded-lg shadow-lg" id="mobile-submenu">
-                    <a href="./courses.html" class="block px-4 py-2 hover:bg-[#EE1C25] hover:text-white">Courses</a>
+                    <a href="/frontend/courses.html" class="block px-4 py-2 hover:bg-[#EE1C25] hover:text-white">Courses</a>
                     <a href="#" class="block px-4 py-2 hover:bg-[#EE1C25] hover:text-white">Internships</a>
                     <a href="#" class="block px-4 py-2 hover:bg-[#EE1C25] hover:text-white">Projects</a>
                     <a href="#" class="block px-4 py-2 hover:bg-[#EE1C25] hover:text-white">Workshops</a>
@@ -76,9 +99,9 @@
                 </div>
             </div>
             
-            <a href="./aboutus.html" class="block text-lg hover:text-[#EE1C25]">About Us</a>
-            <a href="./careers.html" class="block text-lg hover:text-[#EE1C25]">Careers</a>
-            <a href="./login.html" class="block text-lg hover:text-[#EE1C25]">Login</a>
+            <a href="/frontend/aboutus.html" class="block text-lg hover:text-[#EE1C25]">About Us</a>
+            <a href="/frontend/careers.html" class="block text-lg hover:text-[#EE1C25]">Careers</a>
+            <a href="/frontend/login.html" class="block text-lg hover:text-[#EE1C25]">Login</a>
         </div>
     </div>
     
@@ -111,24 +134,18 @@
             About Us
           </h1>
           <p class="text-lg text-justify mb-12">
-            At <strong class="text-blue-600"> Orion Grid</strong>, we are pioneering the future of energy through innovative smart grid technologies and sustainable solutions. Our mission is to create intelligent, connected energy systems that drive global change and empower communities with reliable, efficient, and green power. By blending cutting-edge technology with a commitment to sustainability, we aim to build a more sustainable and energy-efficient world.
-
-            We believe in the power of collaboration and diversity, bringing together talent from around the globe to work on projects that make a real impact. Whether it's optimizing power grids, developing renewable energy solutions, or integrating advanced technologies, Orion Grid is at the forefront of transforming the energy landscape.          </p>
-        
+            At <Strong class="text-[#0065BD]">Orion Grid</Strong>, we believe in the power of knowledge, creativity, and collective action to shape a better tomorrow. Join us on our journey to make a meaningful difference, and together, we will build a brighter, more innovative future for all. As we look toward the future, we envision a world where innovation knows no bounds and where the brightest minds collaborate to tackle some of the most complex global challenges. Through our commitment to nurturing talent, fostering creativity, and embracing collaboration, we aim to be a catalyst for groundbreaking research and transformative solutions.</p>
           <!-- About Section Box -->
           <div class="p-6 bg-white shadow-lg rounded-lg mb-12 border-2 border-blue-500">
             <h2 class="text-2xl font-semibold text-blue-600 mb-4">🌟 Our Mission</h2>
-            <p class="text-lg mb-8">
-              We are committed to providing practical, skill-based education that equips you with the expertise needed to excel in your career and personal life. Whether you're looking to enhance your current skills or learn something new, we are here to help you succeed.
-            </p>
-          </div>
+            <p class="text-lg text-gray-700 text-justify">
+                At <Strong class="text-[#0065BD]">Orion Grid</Strong>, our mission is to empower the next generation of innovators, researchers, and creators by providing transformative experiences in cutting-edge research, development, and exhibition. We are dedicated to fostering a collaborative environment where emerging talents can contribute to breakthrough discoveries, engage with complex global challenges, and showcase their work to a wider audience. Through our internship program, dynamic project exhibitions, and forward-thinking research initiatives, we aim to create a platform that bridges the gap between academic curiosity and real-world application, inspiring positive change and advancing knowledge across industries. We strive to lead in areas Research, guided by a commitment to excellence, sustainability, and technological advancement. At Orion Grid, we believe in the power of knowledge, creativity, and collaboration to shape the future".</p>
+        </div>
         
           <!-- Vision Section Box -->
           <div class="p-6 bg-white shadow-lg rounded-lg mb-12 border-2 border-blue-500">
             <h2 class="text-2xl font-semibold text-blue-600 mb-4">🌍 Our Vision</h2>
-            <p class="text-lg mb-8">
-              To create a global learning community where innovation thrives, and individuals can connect, grow, and achieve their dreams through education that’s both impactful and accessible.
-            </p>
+            <p class="text-lg text-gray-700 text-justify"> At <Strong class="text-[#0065BD]">Orion Grid</Strong>, we envision a future where innovation knows no bounds and where the brightest minds come together to tackle the world’s most pressing challenges. By nurturing a vibrant ecosystem of talent, creativity, and collaboration, we aspire to be at the forefront of groundbreaking research, technological advancement, and transformative solutions. Our goal is to shape a world where ideas from diverse fields converge, driving positive social, environmental, and economic impact. We aim to create a lasting legacy of thought leadership that empowers individuals, organizations, and industries to thrive in an ever-evolving global landscape. Through our commitment to excellence and sustainability, we see Orion Grid as a catalyst for discovery, an incubator of change, and a trusted platform for bridging the gap between academic research and real-world applications. Together, we will build a brighter, more innovative future for all.</p>
           </div>
         
         <hr class="my-12 border-t-2 border-blue-600">
@@ -203,8 +220,8 @@
             <div>
                 <h3 class="text-xl font-semibold mb-4">Quick Links</h3>
                 <ul> 
-                    <li><a href="./index.html" class="hover:text-[#EE1C25]">Home</a></li>
-                    <li><a href="./aboutus.html" class="hover:text-[#EE1C25]">About Us</a></li>
+                    <li><a href="/frontend/index.html" class="hover:text-[#EE1C25]">Home</a></li>
+                    <li><a href="/frontend/aboutus.html" class="hover:text-[#EE1C25]">About Us</a></li>
                     <li><a href="/services" class="hover:text-[#EE1C25]">Services</a></li>
                     <li><a href="/contact" class="hover:text-[#EE1C25]">Contact Us</a></li>
                     <li><a href="/privacy-policy" class="hover:text-[#EE1C25]">Privacy Policy</a></li>
@@ -217,7 +234,7 @@
 
         <!-- Copyright -->
         <div class="text-center mt-8">
-            <p>&copy; 2025 <a href="./index.html" class="text-[#EE1C25]">Orion Grid</a>. All Rights Reserved.</p>
+            <p>&copy; 2025 <a href="/frontend/index.html" class="text-[#EE1C25]">Orion Grid</a>. All Rights Reserved.</p>
         </div>
     </footer>
 

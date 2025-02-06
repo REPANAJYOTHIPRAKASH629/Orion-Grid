@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Orion Grid</title>
-    <link rel="icon" href="./images/logo.jpg" type="image/x-icon">
+    <link rel="icon" href="/frontend/images/logo.jpg" type="image/x-icon">
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap" rel="stylesheet">
     <style>
@@ -16,25 +16,6 @@
                 h1, h2, h3, h4 {
                     font-family: 'Outfit', sans-serif;
                 }
-                .welcome-text {
-    font-size: 2rem; /* Adjust the size as needed */
-    font-weight: bold; /* Makes the text bold */
-    color: #003a6c; /* Blue color (change as needed) */
-    text-align: center; /* Centers the text */
-    margin-top: 20px; /* Adds spacing from the top */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Subtle shadow effect */
-    animation: fadeIn 2s ease-in-out; /* Smooth fade-in effect */
-}
-
-/* Animation for Fade-In Effect */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
     </style>
      <style>
         /* Disable text selection */
@@ -49,11 +30,15 @@
         document.addEventListener('contextmenu', function(event) {
             event.preventDefault();
         });
-        document.addEventListener('DOMContentLoaded',(e)=>{
-            const heading=document.getElementById("name1");
-            heading.textContent+=JSON.parse(sessionStorage.getItem("student"))['name'];
-        })
     </script>
+    <script>
+        // Disable Ctrl + U (View Source) and Ctrl + Shift + I (Dev Tools)
+        document.addEventListener('keydown', function(event) {
+          if ((event.ctrlKey && event.key === 'u') || (event.ctrlKey && event.shiftKey && event.key === 'I')) {
+            event.preventDefault();
+          }
+        });
+      </script>
 </head>
 
 <body class="font-sans bg-white bg-cover bg-center bg-no-repeat bg-fixed" style="background-image: url('https://img.freepik.com/premium-vector/technology-connection-digital-data-white-background_32996-546.jpg?semt=ais_hybrid'); background-size: cover; background-position: center; background-repeat: no-repeat;">
@@ -62,7 +47,7 @@
     <div class="flex justify-between items-center">
         <!-- Logo -->
         <div class="flex-shrink-0">
-            <img src="./images/logo.jpg" alt="Orion Grid Logo" class="w-32 md:w-48 h-auto object-contain">
+            <img src="/frontend/images/logo.jpg" alt="Orion Grid Logo" class="w-32 md:w-48 h-auto object-contain">
         </div>
 
         <!-- Navbar Links -->
@@ -74,16 +59,16 @@
                 <a href="#" class="hover:text-[#EE1C25]"><strong>Services</strong></a>
                 <!-- Submenu (Hidden by default) -->
                 <div class="absolute left-0 mt-0 hidden bg-white text-[#0065BD] rounded-lg shadow-lg group-hover:block group-focus-within:block transition-opacity duration-300 ease-in-out" id="services-dropdown">
-                    <a href="./courses.html" class="block px-4 py-2 hover:bg-[#EE1C25] hover:text-white">Courses</a>
-                    <a href="./internships.html" class="block px-4 py-2 hover:bg-[#EE1C25] hover:text-white">Internships</a>
-                    <a href="./projects.html" class="block px-4 py-2 hover:bg-[#EE1C25] hover:text-white">Projects</a>
-                    <a href="./workshops.html" class="block px-4 py-2 hover:bg-[#EE1C25] hover:text-white">Workshops</a>
+                    <a href="/frontend/courses.html" class="block px-4 py-2 hover:bg-[#EE1C25] hover:text-white">Courses</a>
+                    <a href="/frontend/internships.html" class="block px-4 py-2 hover:bg-[#EE1C25] hover:text-white">Internships</a>
+                    <a href="/frontend/projects.html" class="block px-4 py-2 hover:bg-[#EE1C25] hover:text-white">Projects</a>
+                    <a href="/frontend/workshops.html" class="block px-4 py-2 hover:bg-[#EE1C25] hover:text-white">Workshops</a>
                     <a href="#" class="block px-4 py-2 hover:bg-[#EE1C25] hover:text-white">Research</a>
                 </div>
             </div>
 
-            <a href="./aboutus.html" class="hover:text-[#EE1C25]"><strong>About Us</strong></a>
-            <a href="./careers.html" class="hover:text-[#EE1C25]"><strong>Careers</strong></a>
+            <a href="/frontend/aboutus.html" class="hover:text-[#EE1C25]"><strong>About Us</strong></a>
+            <a href="/frontend/careers.html" class="hover:text-[#EE1C25]"><strong>Careers</strong></a>
             <a href="#" class="hover:text-[#EE1C25]"><strong>My Learnings</strong></a>
         </div>
 
@@ -107,21 +92,21 @@
         <div class="relative" id="mobile-services-dropdown">
             <button class="block text-lg hover:text-[#EE1C25]" id="mobile-services-button">Services</button>
             <div class="absolute left-0 mt-2 hidden bg-white text-black rounded-lg shadow-lg" id="mobile-submenu">
-                <a href="./courses.html" class="block px-4 py-2 hover:bg-[#EE1C25] hover:text-white">Courses</a>
-                <a href="./internships.html" class="block px-4 py-2 hover:bg-[#EE1C25] hover:text-white">Internships</a>
-                <a href="./projects.html" class="block px-4 py-2 hover:bg-[#EE1C25] hover:text-white">Projects</a>
-                <a href="./workshops.html" class="block px-4 py-2 hover:bg-[#EE1C25] hover:text-white">Workshops</a>
+                <a href="/frontend/courses.html" class="block px-4 py-2 hover:bg-[#EE1C25] hover:text-white">Courses</a>
+                <a href="/frontend/internships.html" class="block px-4 py-2 hover:bg-[#EE1C25] hover:text-white">Internships</a>
+                <a href="/frontend/projects.html" class="block px-4 py-2 hover:bg-[#EE1C25] hover:text-white">Projects</a>
+                <a href="/frontend/workshops.html" class="block px-4 py-2 hover:bg-[#EE1C25] hover:text-white">Workshops</a>
                 <a href="#" class="block px-4 py-2 hover:bg-[#EE1C25] hover:text-white">Research</a>
             </div>
         </div>
         
-        <a href="./aboutus.html" class="block text-lg hover:text-[#EE1C25]">About Us</a>
-        <a href="./careers.html" class="block text-lg hover:text-[#EE1C25]">Careers</a>
+        <a href="/frontend/aboutus.html" class="block text-lg hover:text-[#EE1C25]">About Us</a>
+        <a href="/frontend/careers.html" class="block text-lg hover:text-[#EE1C25]">Careers</a>
         <a href="#" class="block text-lg hover:text-[#EE1C25]">My Learnings</a>
     </div>
 </div>
 
-<script defer>
+<script>
     // Mobile Menu Toggle
     document.getElementById('mobile-menu-button').addEventListener('click', function () {
         const mobileMenu = document.getElementById('mobile-menu');
@@ -143,26 +128,24 @@
             mobileSubmenu.classList.add('hidden');
         }
     });
-
-    
 </script>
 
 
     <!-- Accreditation Logos -->
     <section class="py-2 text-center">
-        <h2 id="name1" class="welcome-text">Welcome Back, </h2>
         <h2 class="text-3xl text-[#0065BD] font-semibold mb-4">We are affiliated by</h2>
         <div class="overflow-x-hidden">
             <!-- Marquee for horizontal scrolling logos -->
             <marquee behavior="scroll" direction="left" scrollamount="8" class="space-x-8">
-                <img src="./images/apsche.jpg" alt="Logo 1" class="w-24 h-auto mx-4 inline-block">
-                <img src="./images/aicte.jpg" alt="Logo 2" class="w-24 h-auto mx-4 inline-block">
-                <img src="./images/iso.png" alt="Logo 3" class="w-24 h-auto mx-4 inline-block">
-                <img src="./images/msme.png" alt="Logo 4" class="w-24 h-auto mx-4 inline-block">
+                <img src="/frontend/images/apsche.jpg" alt="Logo 1" class="w-24 h-auto mx-4 inline-block">
+                <img src="/frontend/images/aicte.jpg" alt="Logo 2" class="w-24 h-auto mx-4 inline-block">
+                <img src="/frontend/images/iso.png" alt="Logo 3" class="w-24 h-auto mx-4 inline-block">
+                <img src="/frontend/images/msme.png" alt="Logo 4" class="w-24 h-auto mx-4 inline-block">
             </marquee>
         </div>
     </section>
 
+    <!-- Banner Section -->
     <section class="py-0">
         <div class="relative w-full mx-auto px-2">
             <!-- Carousel Wrapper -->
@@ -171,14 +154,28 @@
                     <div class="w-full flex-shrink-0">
                         <div class="relative w-full" style="padding-top: 56.25%;"> <!-- 16:9 aspect ratio -->
                             <video id="video1" class="absolute top-0 left-0 w-full h-full object-cover rounded-lg shadow-lg" muted>
-                                <source src="./images/banner1.mp4" type="video/mp4">
+                                <source src="/frontend/images/banner1.mp4" type="video/mp4">
                             </video>
                         </div>
                     </div>
                     <div class="w-full flex-shrink-0">
                         <div class="relative w-full" style="padding-top: 56.25%;"> <!-- 16:9 aspect ratio -->
                             <video id="video2" class="absolute top-0 left-0 w-full h-full object-cover rounded-lg shadow-lg" muted>
-                                <source src="./images/banner2.mp4" type="video/mp4">
+                                <source src="/frontend/images/banner2.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                    </div>
+                    <div class="w-full flex-shrink-0">
+                        <div class="relative w-full" style="padding-top: 56.25%;"> <!-- 16:9 aspect ratio -->
+                            <video id="video3" class="absolute top-0 left-0 w-full h-full object-cover rounded-lg shadow-lg" muted>
+                                <source src="/frontend/images/banner1.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                    </div>
+                    <div class="w-full flex-shrink-0">
+                        <div class="relative w-full" style="padding-top: 56.25%;"> <!-- 16:9 aspect ratio -->
+                            <video id="video4" class="absolute top-0 left-0 w-full h-full object-cover rounded-lg shadow-lg" muted>
+                                <source src="/frontend/images/banner2.mp4" type="video/mp4">
                             </video>
                         </div>
                     </div>
@@ -188,28 +185,60 @@
             <button id="next" class="absolute top-1/2 right-0 transform -translate-y-1/2 bg-[#EE1C25] text-white px-4 py-2 rounded-full focus:outline-none">></button>
         </div>
     </section>
-
+    
     <script>
         let currentIndex = 0;
         const images = document.querySelectorAll("#banner-carousel > div");
         const totalImages = images.length;
         const carousel = document.getElementById("banner-carousel");
-
+    
+        // Array to hold all video elements
+        const videos = [
+            document.getElementById("video1"),
+            document.getElementById("video2"),
+            document.getElementById("video3"),
+            document.getElementById("video4")
+        ];
+    
+        // Start playing the first video
+        videos[currentIndex].play();
+    
+        // Function to move to the next slide
         function nextSlide() {
+            // Pause the current video and move to the next slide
+            videos[currentIndex].pause();
             currentIndex = (currentIndex + 1) % totalImages;
-            carousel.style.transform = translateX(`-${currentIndex * 100}%`);
+            carousel.style.transform = `translateX(-${currentIndex * 100}%)`;
+    
+            // Play the next video
+            videos[currentIndex].play();
         }
-
+    
+        // Function to move to the previous slide
         function prevSlide() {
+            // Pause the current video and move to the previous slide
+            videos[currentIndex].pause();
             currentIndex = (currentIndex - 1 + totalImages) % totalImages;
-            carousel.style.transform = translateX(`-${currentIndex * 100}%`);
+            carousel.style.transform = `translateX(-${currentIndex * 100}%)`;
+    
+            // Play the previous video
+            videos[currentIndex].play();
         }
-
-        setInterval(nextSlide, 3000);
-
+    
+        // Event listener to automatically move to next slide when the video ends
+        videos.forEach((video, index) => {
+            video.addEventListener("ended", () => {
+                // Wait for video to finish before moving to the next slide
+                nextSlide();
+            });
+        });
+    
+        // Button click events
         document.getElementById("next").addEventListener("click", nextSlide);
         document.getElementById("prev").addEventListener("click", prevSlide);
+    
     </script>
+    
 
     <!-- Mission and Vision -->
     <section class="py-8 text-white">
@@ -236,47 +265,47 @@
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
                 <!-- Skill-based Courses -->
                 <div class="text-center bg-white p-6 rounded-lg shadow-lg transform hover:scale-105 transition-all duration-300 ease-in-out">
-                    <img src="./images/skill.jpg" alt="Skill Based" class="w-full h-48 object-cover mb-4 rounded-lg shadow-md">
+                    <img src="/frontend/images/skill.jpg" alt="Skill Based" class="w-full h-48 object-cover mb-4 rounded-lg shadow-md">
                     <h3 class="text-xl font-semibold text-[#0065BD] mb-2">Skill-based Courses</h3>
                     <p class="text-gray-700 mb-4 text-justify">
                         Skill-based courses focus on practical, hands-on learning to develop specific competencies in areas like technology, communication, and leadership.
                     </p>
-                    <a href="./courses.html" class="text-[#EE1C25] hover:text-[#0065BD] font-semibold">Explore Courses</a>
+                    <a href="/frontend/courses.html" class="text-[#EE1C25] hover:text-[#0065BD] font-semibold">Explore Courses</a>
                 </div>
     
                 <!-- Project Expertise Domains -->
                 <div class="text-center bg-white p-6 rounded-lg shadow-lg transform hover:scale-105 transition-all duration-300 ease-in-out">
-                    <img src="./images/domain.jpeg" alt="Project Expertise" class="w-full h-48 object-cover mb-4 rounded-lg shadow-md">
+                    <img src="/frontend/images/domain.jpeg" alt="Project Expertise" class="w-full h-48 object-cover mb-4 rounded-lg shadow-md">
                     <h3 class="text-xl font-semibold text-[#0065BD] mb-2">Project Expertise Domains</h3>
                     <p class="text-gray-700 mb-4 text-justify">
                         Project expertise domains refer to specialized areas of knowledge and skill required to manage and execute projects effectively.
                     </p>
-                    <a href="./projects.html" class="text-[#EE1C25] hover:text-[#0065BD] font-semibold">Explore Projects</a>
+                    <a href="/frontend/projects.html" class="text-[#EE1C25] hover:text-[#0065BD] font-semibold">Explore Projects</a>
                 </div>
     
                 <!-- Workshops -->
                 <div class="text-center bg-white p-6 rounded-lg shadow-lg transform hover:scale-105 transition-all duration-300 ease-in-out">
-                    <img src="./images/workshops.jpg" alt="Workshops" class="w-full h-48 object-cover mb-4 rounded-lg shadow-md">
+                    <img src="/frontend/images/workshops.jpg" alt="Workshops" class="w-full h-48 object-cover mb-4 rounded-lg shadow-md">
                     <h3 class="text-xl font-semibold text-[#0065BD] mb-2">Workshops</h3>
                     <p class="text-gray-700 mb-4 text-justify">
                         Workshops are interactive, hands-on learning sessions designed to teach specific skills or concepts in a focused, collaborative environment.
                     </p>
-                    <a href="./workshops.html" class="text-[#EE1C25] hover:text-[#0065BD] font-semibold">Explore Workshops</a>
+                    <a href="/frontend/workshops.html" class="text-[#EE1C25] hover:text-[#0065BD] font-semibold">Explore Workshops</a>
                 </div>
     
                 <!-- Research -->
                 <div class="text-center bg-white p-6 rounded-lg shadow-lg transform hover:scale-105 transition-all duration-300 ease-in-out">
-                    <img src="./images/research.jpg" alt="Research" class="w-full h-48 object-cover mb-4 rounded-lg shadow-md">
+                    <img src="/frontend/images/research.jpg" alt="Research" class="w-full h-48 object-cover mb-4 rounded-lg shadow-md">
                     <h3 class="text-xl font-semibold text-[#0065BD] mb-2">Research</h3>
                     <p class="text-gray-700 mb-4 text-justify">
                         Research is the systematic process of investigating a topic, question, or problem to discover new information, validate existing knowledge, or develop innovative solutions.
                     </p>
-                    <a href="./research.html" class="text-[#EE1C25] hover:text-[#0065BD] font-semibold">Explore Research</a>
+                    <a href="/frontend/research.html" class="text-[#EE1C25] hover:text-[#0065BD] font-semibold">Explore Research</a>
                 </div>
             </div>
         </div>
     </section>
-    <img src="./images/ks.png" alt="Full Screen Image" class="ml-40 w-[80%] object-contain">
+    <img src="/frontend/images/ks.png" alt="Full Screen Image" class="ml-40 w-[80%] object-contain">
     <section class="py-6">
         <div class="max-w-7xl mx-auto px-6">
             
@@ -288,7 +317,7 @@
                     <p class="text-gray-700 mb-4 text-justify">
                         We offer a wide range of skill-based courses to help individuals gain practical, hands-on experience in various fields.
                     </p>
-                    <a href="./courses.html" class="text-[#EE1C25] hover:text-[#0065BD] font-semibold">Learn More</a>
+                    <a href="/frontend/courses.html" class="text-[#EE1C25] hover:text-[#0065BD] font-semibold">Learn More</a>
                 </div>
     
                 <!-- Internships -->
@@ -297,7 +326,7 @@
                     <p class="text-gray-700 mb-4 text-justify">
                         Our internships provide real-world experience and the opportunity to work on industry-relevant projects.
                     </p>
-                    <a href="./internships.html" class="text-[#EE1C25] hover:text-[#0065BD] font-semibold">Learn More</a>
+                    <a href="/frontend/internships.html" class="text-[#EE1C25] hover:text-[#0065BD] font-semibold">Learn More</a>
                 </div>
     
                 <!-- Workshops -->
@@ -306,7 +335,7 @@
                     <p class="text-gray-700 mb-4 text-justify">
                         Our interactive workshops are designed to build practical skills and foster collaboration among participants.
                     </p>
-                    <a href="./workshops.html" class="text-[#EE1C25] hover:text-[#0065BD] font-semibold">Learn More</a>
+                    <a href="/frontend/workshops.html" class="text-[#EE1C25] hover:text-[#0065BD] font-semibold">Learn More</a>
                 </div>
     
                 <!-- Projects -->
@@ -315,7 +344,7 @@
                     <p class="text-gray-700 mb-4 text-justify">
                         Get hands-on experience by working on innovative projects that make a real impact in the community.
                     </p>
-                    <a href="./projects.html" class="text-[#EE1C25] hover:text-[#0065BD] font-semibold">Learn More</a>
+                    <a href="/frontend/projects.html" class="text-[#EE1C25] hover:text-[#0065BD] font-semibold">Learn More</a>
                 </div>
             </div>
         </div>
@@ -387,11 +416,11 @@
             <div>
                 <h3 class="text-xl font-semibold mb-4">Quick Links</h3>
                 <ul> 
-                    <li><a href="./index.html" class="hover:text-[#EE1C25]">Home</a></li>
-                    <li><a href="./aboutus.html" class="hover:text-[#EE1C25]">About Us</a></li>
-                    <li><a href="./internships.html" class="hover:text-[#EE1C25]">Internships</a></li>
-                    <li><a href="./courses.html" class="hover:text-[#EE1C25]">Courses</a></li>
-                    <li><a href="./projects.html" class="hover:text-[#EE1C25]">Projects</a></li>
+                    <li><a href="/frontend/index.html" class="hover:text-[#EE1C25]">Home</a></li>
+                    <li><a href="/frontend/aboutus.html" class="hover:text-[#EE1C25]">About Us</a></li>
+                    <li><a href="/frontend/internships.html" class="hover:text-[#EE1C25]">Internships</a></li>
+                    <li><a href="/frontend/courses.html" class="hover:text-[#EE1C25]">Courses</a></li>
+                    <li><a href="/frontend/projects.html" class="hover:text-[#EE1C25]">Projects</a></li>
                     <li><a href="/contact" class="hover:text-[#EE1C25]">Contact Us</a></li>
                     <li><a href="/privacy-policy" class="hover:text-[#EE1C25]">Privacy Policy</a></li>
                     <li><a href="/terms-of-service" class="hover:text-[#EE1C25]">Terms & Conditions</a></li>
@@ -403,7 +432,7 @@
 
         <!-- Copyright -->
         <div class="text-center mt-8">
-            <p>&copy; 2025 <a href="./index.html" class="text-[#EE1C25]">Orion Grid</a>. All Rights Reserved.</p>
+            <p>&copy; 2025 <a href="/frontend/index.html" class="text-[#EE1C25]">Orion Grid</a>. All Rights Reserved.</p>
         </div>
     </footer>
 
