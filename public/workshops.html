@@ -56,7 +56,95 @@
     </script>
 </head>
 
-<body class="bg-gray-100 text-gray-800">
+<body class="bg-white text-gray-800">
+    <nav class="text-[#EE1C25] py-2 px-4 md:px-8 ">
+        <div class="flex justify-between items-center">
+            <!-- Logo -->
+            <div class="flex-shrink-0">
+                <img src="/public/images/logo.jpg" alt="Orion Grid Logo" class="w-32 md:w-48 h-auto object-contain">
+            </div>
+    
+            <!-- Navbar Links -->
+            <div class="hidden md:flex space-x-6 text-lg">
+                <a href="#" class="hover:text-[#EE1C25]"><strong>Home</strong></a>
+    
+                <!-- Services Dropdown -->
+                <div class="relative group">
+                    <a href="#" class="hover:text-[#EE1C25]"><strong>Services</strong></a>
+                    <!-- Submenu (Hidden by default) -->
+                    <div class="absolute left-0 mt-0 hidden bg-white text-[#0065BD] rounded-lg shadow-lg group-hover:block group-focus-within:block transition-opacity duration-300 ease-in-out" id="services-dropdown">
+                        <a href="/public/courses.html" class="block px-4 py-2 hover:bg-[#EE1C25] hover:text-white">Courses</a>
+                        <a href="/public/internships.html" class="block px-4 py-2 hover:bg-[#EE1C25] hover:text-white">Internships</a>
+                        <a href="/public/projects.html" class="block px-4 py-2 hover:bg-[#EE1C25] hover:text-white">Projects</a>
+                        <a href="/public/workshops.html" class="block px-4 py-2 hover:bg-[#EE1C25] hover:text-white">Workshops</a>
+                        <a href="#" class="block px-4 py-2 hover:bg-[#EE1C25] hover:text-white">Research</a>
+                    </div>
+                </div>
+    
+                <a href="/public/aboutus.html" class="hover:text-[#EE1C25]"><strong>About Us</strong></a>
+                <a href="/public/careers.html" class="hover:text-[#EE1C25]"><strong>Careers</strong></a>
+                <a href="/public/login.html" class="hover:text-[#EE1C25]"><strong>Login</strong></a>
+            </div>
+    
+            <!-- Mobile Menu Button -->
+            <div class="md:hidden flex items-center">
+                <button class="text-[#EE1C25]" id="mobile-menu-button">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Mobile Menu -->
+    <div class="md:hidden hidden" id="mobile-menu">
+        <div class="space-y-4 px-6 py-4">
+            <a href="/public/homepage.html" class="block text-lg hover:text-[#EE1C25]">Home</a>
+            
+            <!-- Services Dropdown for Mobile -->
+            <div class="relative" id="mobile-services-dropdown">
+                <button class="block text-lg hover:text-[#EE1C25]" id="mobile-services-button">Services</button>
+                <div class="absolute left-0 mt-2 hidden bg-white text-black rounded-lg shadow-lg" id="mobile-submenu">
+                    <a href="/public/courses.html" class="block px-4 py-2 hover:bg-[#EE1C25] hover:text-white">Courses</a>
+                    <a href="#" class="block px-4 py-2 hover:bg-[#EE1C25] hover:text-white">Internships</a>
+                    <a href="#" class="block px-4 py-2 hover:bg-[#EE1C25] hover:text-white">Projects</a>
+                    <a href="#" class="block px-4 py-2 hover:bg-[#EE1C25] hover:text-white">Workshops</a>
+                    <a href="#" class="block px-4 py-2 hover:bg-[#EE1C25] hover:text-white">Research</a>
+                </div>
+            </div>
+            
+            <a href="/public/aboutus.html" class="block text-lg hover:text-[#EE1C25]">About Us</a>
+            <a href="/public/careers.html" class="block text-lg hover:text-[#EE1C25]">Careers</a>
+            <a href="/public/login.html" class="block text-lg hover:text-[#EE1C25]">Login</a>
+        </div>
+    </div>
+    
+    <script>
+        // Mobile Menu Toggle
+        document.getElementById('mobile-menu-button').addEventListener('click', function () {
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenu.classList.toggle('hidden');
+        });
+    
+        // Mobile Services Dropdown Toggle
+        const mobileServicesButton = document.getElementById('mobile-services-button');
+        const mobileSubmenu = document.getElementById('mobile-submenu');
+        
+        mobileServicesButton.addEventListener('click', function () {
+            mobileSubmenu.classList.toggle('hidden');
+        });
+    
+        // Optional: Close submenu when clicking outside (for mobile view)
+        document.addEventListener('click', function (e) {
+            const isClickInside = mobileServicesButton.contains(e.target) || mobileSubmenu.contains(e.target);
+            if (!isClickInside) {
+                mobileSubmenu.classList.add('hidden');
+            }
+        });
+    </script>
+    
+    
 
     <div class="max-w-7xl mx-auto p-6">
 

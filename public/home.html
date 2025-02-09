@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Orion Grid</title>
-    <link rel="icon" href="/frontend/images/logo.jpg" type="image/x-icon">
+    <link rel="icon" href="/public/images/logo.jpg" type="image/x-icon">
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap" rel="stylesheet">
     <style>
@@ -17,7 +17,7 @@
                     font-family: 'Outfit', sans-serif;
                 }
     </style>
-     <style>
+     <!-- <style>
         /* Disable text selection */
         body {
             user-select: none;
@@ -38,7 +38,7 @@
             event.preventDefault();
           }
         });
-      </script>
+      </script> -->
 </head>
 
 <body class="font-sans bg-white bg-cover bg-center bg-no-repeat bg-fixed" style="background-image: url('https://img.freepik.com/premium-vector/technology-connection-digital-data-white-background_32996-546.jpg?semt=ais_hybrid'); background-size: cover; background-position: center; background-repeat: no-repeat;">
@@ -47,7 +47,7 @@
     <div class="flex justify-between items-center">
         <!-- Logo -->
         <div class="flex-shrink-0">
-            <img src="/frontend/images/logo.jpg" alt="Orion Grid Logo" class="w-32 md:w-48 h-auto object-contain">
+            <img src="/public/images/logo.jpg" alt="Orion Grid Logo" class="w-32 md:w-48 h-auto object-contain">
         </div>
 
         <!-- Navbar Links -->
@@ -59,16 +59,16 @@
                 <a href="#" class="hover:text-[#EE1C25]"><strong>Services</strong></a>
                 <!-- Submenu (Hidden by default) -->
                 <div class="absolute left-0 mt-0 hidden bg-white text-[#0065BD] rounded-lg shadow-lg group-hover:block group-focus-within:block transition-opacity duration-300 ease-in-out" id="services-dropdown">
-                    <a href="/frontend/courses.html" class="block px-4 py-2 hover:bg-[#EE1C25] hover:text-white">Courses</a>
-                    <a href="/frontend/internships.html" class="block px-4 py-2 hover:bg-[#EE1C25] hover:text-white">Internships</a>
-                    <a href="/frontend/projects.html" class="block px-4 py-2 hover:bg-[#EE1C25] hover:text-white">Projects</a>
-                    <a href="/frontend/workshops.html" class="block px-4 py-2 hover:bg-[#EE1C25] hover:text-white">Workshops</a>
+                    <a href="/public/courses.html" class="block px-4 py-2 hover:bg-[#EE1C25] hover:text-white">Courses</a>
+                    <a href="/public/internships.html" class="block px-4 py-2 hover:bg-[#EE1C25] hover:text-white">Internships</a>
+                    <a href="/public/projects.html" class="block px-4 py-2 hover:bg-[#EE1C25] hover:text-white">Projects</a>
+                    <a href="/public/workshops.html" class="block px-4 py-2 hover:bg-[#EE1C25] hover:text-white">Workshops</a>
                     <a href="#" class="block px-4 py-2 hover:bg-[#EE1C25] hover:text-white">Research</a>
                 </div>
             </div>
 
-            <a href="/frontend/aboutus.html" class="hover:text-[#EE1C25]"><strong>About Us</strong></a>
-            <a href="/frontend/careers.html" class="hover:text-[#EE1C25]"><strong>Careers</strong></a>
+            <a href="/public/aboutus.html" class="hover:text-[#EE1C25]"><strong>About Us</strong></a>
+            <a href="/public/careers.html" class="hover:text-[#EE1C25]"><strong>Careers</strong></a>
             <a href="#" class="hover:text-[#EE1C25]"><strong>My Learnings</strong></a>
         </div>
 
@@ -86,23 +86,23 @@
 <!-- Mobile Menu -->
 <div class="md:hidden hidden" id="mobile-menu">
     <div class="space-y-4 px-6 py-4">
-        <a href="#" class="block text-lg hover:text-[#EE1C25]">Home</a>
+        <a href="/public/homepage.html" class="block text-lg hover:text-[#EE1C25]">Home</a>
         
         <!-- Services Dropdown for Mobile -->
         <div class="relative" id="mobile-services-dropdown">
             <button class="block text-lg hover:text-[#EE1C25]" id="mobile-services-button">Services</button>
             <div class="absolute left-0 mt-2 hidden bg-white text-black rounded-lg shadow-lg" id="mobile-submenu">
-                <a href="/frontend/courses.html" class="block px-4 py-2 hover:bg-[#EE1C25] hover:text-white">Courses</a>
-                <a href="/frontend/internships.html" class="block px-4 py-2 hover:bg-[#EE1C25] hover:text-white">Internships</a>
-                <a href="/frontend/projects.html" class="block px-4 py-2 hover:bg-[#EE1C25] hover:text-white">Projects</a>
-                <a href="/frontend/workshops.html" class="block px-4 py-2 hover:bg-[#EE1C25] hover:text-white">Workshops</a>
+                <a href="/public/courses.html" class="block px-4 py-2 hover:bg-[#EE1C25] hover:text-white">Courses</a>
+                <a href="#" class="block px-4 py-2 hover:bg-[#EE1C25] hover:text-white">Internships</a>
+                <a href="#" class="block px-4 py-2 hover:bg-[#EE1C25] hover:text-white">Projects</a>
+                <a href="#" class="block px-4 py-2 hover:bg-[#EE1C25] hover:text-white">Workshops</a>
                 <a href="#" class="block px-4 py-2 hover:bg-[#EE1C25] hover:text-white">Research</a>
             </div>
         </div>
         
-        <a href="/frontend/aboutus.html" class="block text-lg hover:text-[#EE1C25]">About Us</a>
-        <a href="/frontend/careers.html" class="block text-lg hover:text-[#EE1C25]">Careers</a>
-        <a href="#" class="block text-lg hover:text-[#EE1C25]">My Learnings</a>
+        <a href="/public/aboutus.html" class="block text-lg hover:text-[#EE1C25]">About Us</a>
+        <a href="/public/careers.html" class="block text-lg hover:text-[#EE1C25]">Careers</a>
+        <a href="/public/login.html" class="block text-lg hover:text-[#EE1C25]">Login</a>
     </div>
 </div>
 
@@ -137,107 +137,119 @@
         <div class="overflow-x-hidden">
             <!-- Marquee for horizontal scrolling logos -->
             <marquee behavior="scroll" direction="left" scrollamount="8" class="space-x-8">
-                <img src="/frontend/images/apsche.jpg" alt="Logo 1" class="w-24 h-auto mx-4 inline-block">
-                <img src="/frontend/images/aicte.jpg" alt="Logo 2" class="w-24 h-auto mx-4 inline-block">
-                <img src="/frontend/images/iso.png" alt="Logo 3" class="w-24 h-auto mx-4 inline-block">
-                <img src="/frontend/images/msme.png" alt="Logo 4" class="w-24 h-auto mx-4 inline-block">
+                <img src="/public/images/apsche.jpg" alt="Logo 1" class="w-24 h-auto mx-4 inline-block">
+                <img src="/public/images/aicte.jpg" alt="Logo 2" class="w-20 h-auto mx-4 inline-block">
+                <img src="/public/images/iso.png" alt="Logo 3" class="w-24 h-auto mx-4 inline-block">
+                <img src="/public/images/msme.jpg" alt="Logo 4" class="w-32 h-auto mx-4 inline-block">
             </marquee>
         </div>
     </section>
 
     <!-- Banner Section -->
-    <section class="py-0">
-        <div class="relative w-full mx-auto px-2">
-            <!-- Carousel Wrapper -->
-            <div class="overflow-hidden">
-                <div id="banner-carousel" class="flex transition-transform duration-1000 ease-in-out">
-                    <div class="w-full flex-shrink-0">
-                        <div class="relative w-full" style="padding-top: 56.25%;"> <!-- 16:9 aspect ratio -->
-                            <video id="video1" class="absolute top-0 left-0 w-full h-full object-cover rounded-lg shadow-lg" muted>
-                                <source src="/frontend/images/banner1.mp4" type="video/mp4">
-                            </video>
-                        </div>
+<section class="py-0">
+    <div class="relative w-full md:w-3/4 lg:w-2/3 xl:w-1/2 mx-auto px-2"> <!-- Adjusted widths for responsiveness -->
+        <!-- Carousel Wrapper -->
+        <div class="overflow-hidden">
+            <div id="banner-carousel" class="flex transition-transform duration-1000 ease-in-out">
+                <div class="w-full flex-shrink-0">
+                    <div class="relative w-full" style="padding-top: 56.25%;"> <!-- 16:9 aspect ratio -->
+                        <video id="video1" class="absolute top-0 left-0 w-full h-full object-cover rounded-lg shadow-lg" muted>
+                            <source src="/public/images/banner1.mp4" type="video/mp4">
+                        </video>
                     </div>
-                    <div class="w-full flex-shrink-0">
-                        <div class="relative w-full" style="padding-top: 56.25%;"> <!-- 16:9 aspect ratio -->
-                            <video id="video2" class="absolute top-0 left-0 w-full h-full object-cover rounded-lg shadow-lg" muted>
-                                <source src="/frontend/images/banner2.mp4" type="video/mp4">
-                            </video>
-                        </div>
+                </div>
+                <div class="w-full flex-shrink-0">
+                    <div class="relative w-full" style="padding-top: 56.25%;"> <!-- 16:9 aspect ratio -->
+                        <video id="video2" class="absolute top-0 left-0 w-full h-full object-cover rounded-lg shadow-lg" muted>
+                            <source src="/public/images/banner2.mp4" type="video/mp4">
+                        </video>
                     </div>
-                    <div class="w-full flex-shrink-0">
-                        <div class="relative w-full" style="padding-top: 56.25%;"> <!-- 16:9 aspect ratio -->
-                            <video id="video3" class="absolute top-0 left-0 w-full h-full object-cover rounded-lg shadow-lg" muted>
-                                <source src="/frontend/images/banner1.mp4" type="video/mp4">
-                            </video>
-                        </div>
+                </div>
+                <div class="w-full flex-shrink-0">
+                    <div class="relative w-full" style="padding-top: 56.25%;"> <!-- 16:9 aspect ratio -->
+                        <video id="video3" class="absolute top-0 left-0 w-full h-full object-cover rounded-lg shadow-lg" muted>
+                            <source src="/public/images/banner3.mp4" type="video/mp4">
+                        </video>
                     </div>
-                    <div class="w-full flex-shrink-0">
-                        <div class="relative w-full" style="padding-top: 56.25%;"> <!-- 16:9 aspect ratio -->
-                            <video id="video4" class="absolute top-0 left-0 w-full h-full object-cover rounded-lg shadow-lg" muted>
-                                <source src="/frontend/images/banner2.mp4" type="video/mp4">
-                            </video>
-                        </div>
+                </div>
+                
+                <script>
+                    // Select the video element with id 'video3'
+                    const video3 = document.getElementById("video3");
+                
+                    // Set playback speed to 3x normal speed
+                    video3.playbackRate = 2;
+                
+                    // Optionally, you can start playing the video immediately
+                    video3.play();
+                </script>
+                
+                <div class="w-full flex-shrink-0">
+                    <div class="relative w-full" style="padding-top: 56.25%;"> <!-- 16:9 aspect ratio -->
+                        <video id="video4" class="absolute top-0 left-0 w-full h-full object-cover rounded-lg shadow-lg" muted>
+                            <source src="/public/images/banner2.mp4" type="video/mp4">
+                        </video>
                     </div>
                 </div>
             </div>
-            <button id="prev" class="absolute top-1/2 left-0 transform -translate-y-1/2 bg-[#EE1C25] text-white px-4 py-2 rounded-full focus:outline-none"><</button>
-            <button id="next" class="absolute top-1/2 right-0 transform -translate-y-1/2 bg-[#EE1C25] text-white px-4 py-2 rounded-full focus:outline-none">></button>
         </div>
-    </section>
-    
-    <script>
-        let currentIndex = 0;
-        const images = document.querySelectorAll("#banner-carousel > div");
-        const totalImages = images.length;
-        const carousel = document.getElementById("banner-carousel");
-    
-        // Array to hold all video elements
-        const videos = [
-            document.getElementById("video1"),
-            document.getElementById("video2"),
-            document.getElementById("video3"),
-            document.getElementById("video4")
-        ];
-    
-        // Start playing the first video
+        <button id="prev" class="absolute top-1/2 left-0 transform -translate-y-1/2 bg-[#EE1C25] text-white px-4 py-2 rounded-full focus:outline-none"><</button>
+        <button id="next" class="absolute top-1/2 right-0 transform -translate-y-1/2 bg-[#EE1C25] text-white px-4 py-2 rounded-full focus:outline-none">></button>
+    </div>
+</section>
+
+<script>
+    let currentIndex = 0;
+    const images = document.querySelectorAll("#banner-carousel > div");
+    const totalImages = images.length;
+    const carousel = document.getElementById("banner-carousel");
+
+    // Array to hold all video elements
+    const videos = [
+        document.getElementById("video1"),
+        document.getElementById("video2"),
+        document.getElementById("video3"),
+        document.getElementById("video4")
+    ];
+
+    // Start playing the first video
+    videos[currentIndex].play();
+
+    // Function to move to the next slide
+    function nextSlide() {
+        // Pause the current video and move to the next slide
+        videos[currentIndex].pause();
+        currentIndex = (currentIndex + 1) % totalImages;
+        carousel.style.transform = `translateX(-${currentIndex * 100}%)`;
+
+        // Play the next video
         videos[currentIndex].play();
-    
-        // Function to move to the next slide
-        function nextSlide() {
-            // Pause the current video and move to the next slide
-            videos[currentIndex].pause();
-            currentIndex = (currentIndex + 1) % totalImages;
-            carousel.style.transform = `translateX(-${currentIndex * 100}%)`;
-    
-            // Play the next video
-            videos[currentIndex].play();
-        }
-    
-        // Function to move to the previous slide
-        function prevSlide() {
-            // Pause the current video and move to the previous slide
-            videos[currentIndex].pause();
-            currentIndex = (currentIndex - 1 + totalImages) % totalImages;
-            carousel.style.transform = `translateX(-${currentIndex * 100}%)`;
-    
-            // Play the previous video
-            videos[currentIndex].play();
-        }
-    
-        // Event listener to automatically move to next slide when the video ends
-        videos.forEach((video, index) => {
-            video.addEventListener("ended", () => {
-                // Wait for video to finish before moving to the next slide
-                nextSlide();
-            });
+    }
+
+    // Function to move to the previous slide
+    function prevSlide() {
+        // Pause the current video and move to the previous slide
+        videos[currentIndex].pause();
+        currentIndex = (currentIndex - 1 + totalImages) % totalImages;
+        carousel.style.transform = `translateX(-${currentIndex * 100}%)`;
+
+        // Play the previous video
+        videos[currentIndex].play();
+    }
+
+    // Event listener to automatically move to next slide when the video ends
+    videos.forEach((video, index) => {
+        video.addEventListener("ended", () => {
+            // Wait for video to finish before moving to the next slide
+            nextSlide();
         });
-    
-        // Button click events
-        document.getElementById("next").addEventListener("click", nextSlide);
-        document.getElementById("prev").addEventListener("click", prevSlide);
-    
-    </script>
+    });
+
+    // Button click events
+    document.getElementById("next").addEventListener("click", nextSlide);
+    document.getElementById("prev").addEventListener("click", prevSlide);
+</script>
+
     
 
     <!-- Mission and Vision -->
@@ -265,47 +277,49 @@
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
                 <!-- Skill-based Courses -->
                 <div class="text-center bg-white p-6 rounded-lg shadow-lg transform hover:scale-105 transition-all duration-300 ease-in-out">
-                    <img src="/frontend/images/skill.jpg" alt="Skill Based" class="w-full h-48 object-cover mb-4 rounded-lg shadow-md">
+                    <img src="/public/images/skills.jpg" alt="Skill Based" class="w-full h-48 object-cover mb-4 rounded-lg shadow-md">
                     <h3 class="text-xl font-semibold text-[#0065BD] mb-2">Skill-based Courses</h3>
                     <p class="text-gray-700 mb-4 text-justify">
                         Skill-based courses focus on practical, hands-on learning to develop specific competencies in areas like technology, communication, and leadership.
                     </p>
-                    <a href="/frontend/courses.html" class="text-[#EE1C25] hover:text-[#0065BD] font-semibold">Explore Courses</a>
+                    <a href="/public/courses.html" class="text-[#EE1C25] hover:text-[#0065BD] font-semibold">Explore Courses</a>
                 </div>
     
                 <!-- Project Expertise Domains -->
                 <div class="text-center bg-white p-6 rounded-lg shadow-lg transform hover:scale-105 transition-all duration-300 ease-in-out">
-                    <img src="/frontend/images/domain.jpeg" alt="Project Expertise" class="w-full h-48 object-cover mb-4 rounded-lg shadow-md">
+                    <img src="/public/images/domain.jpeg" alt="Project Expertise" class="w-full h-48 object-cover mb-4 rounded-lg shadow-md">
                     <h3 class="text-xl font-semibold text-[#0065BD] mb-2">Project Expertise Domains</h3>
                     <p class="text-gray-700 mb-4 text-justify">
                         Project expertise domains refer to specialized areas of knowledge and skill required to manage and execute projects effectively.
                     </p>
-                    <a href="/frontend/projects.html" class="text-[#EE1C25] hover:text-[#0065BD] font-semibold">Explore Projects</a>
+                    <a href="/public/projects.html" class="text-[#EE1C25] hover:text-[#0065BD] font-semibold">Explore Projects</a>
                 </div>
     
                 <!-- Workshops -->
                 <div class="text-center bg-white p-6 rounded-lg shadow-lg transform hover:scale-105 transition-all duration-300 ease-in-out">
-                    <img src="/frontend/images/workshops.jpg" alt="Workshops" class="w-full h-48 object-cover mb-4 rounded-lg shadow-md">
+                    <img src="/public/images/workshops.jpg" alt="Workshops" class="w-full h-48 object-cover mb-4 rounded-lg shadow-md">
                     <h3 class="text-xl font-semibold text-[#0065BD] mb-2">Workshops</h3>
                     <p class="text-gray-700 mb-4 text-justify">
                         Workshops are interactive, hands-on learning sessions designed to teach specific skills or concepts in a focused, collaborative environment.
                     </p>
-                    <a href="/frontend/workshops.html" class="text-[#EE1C25] hover:text-[#0065BD] font-semibold">Explore Workshops</a>
+                    <a href="/public/workshops.html" class="text-[#EE1C25] hover:text-[#0065BD] font-semibold">Explore Workshops</a>
                 </div>
     
                 <!-- Research -->
                 <div class="text-center bg-white p-6 rounded-lg shadow-lg transform hover:scale-105 transition-all duration-300 ease-in-out">
-                    <img src="/frontend/images/research.jpg" alt="Research" class="w-full h-48 object-cover mb-4 rounded-lg shadow-md">
+                    <img src="/public/images/research.jpg" alt="Research" class="w-full h-48 object-cover mb-4 rounded-lg shadow-md">
                     <h3 class="text-xl font-semibold text-[#0065BD] mb-2">Research</h3>
                     <p class="text-gray-700 mb-4 text-justify">
                         Research is the systematic process of investigating a topic, question, or problem to discover new information, validate existing knowledge, or develop innovative solutions.
                     </p>
-                    <a href="/frontend/research.html" class="text-[#EE1C25] hover:text-[#0065BD] font-semibold">Explore Research</a>
+                    <a href="/public/research.html" class="text-[#EE1C25] hover:text-[#0065BD] font-semibold">Explore Research</a>
                 </div>
             </div>
         </div>
     </section>
-    <img src="/frontend/images/ks.png" alt="Full Screen Image" class="ml-40 w-[80%] object-contain">
+    <!-- <img src="/public/images/ks.png" alt="Full Screen Image" class="ml-40 w-[80%] object-contain"> -->
+    <img src="/public/images/ks.png" alt="Full Screen Image" class="ml-10 w-[80%] object-contain sm:ml-4 md:ml-10 lg:ml-40">
+
     <section class="py-6">
         <div class="max-w-7xl mx-auto px-6">
             
@@ -317,7 +331,7 @@
                     <p class="text-gray-700 mb-4 text-justify">
                         We offer a wide range of skill-based courses to help individuals gain practical, hands-on experience in various fields.
                     </p>
-                    <a href="/frontend/courses.html" class="text-[#EE1C25] hover:text-[#0065BD] font-semibold">Learn More</a>
+                    <a href="/public/courses.html" class="text-[#EE1C25] hover:text-[#0065BD] font-semibold">Learn More</a>
                 </div>
     
                 <!-- Internships -->
@@ -326,7 +340,7 @@
                     <p class="text-gray-700 mb-4 text-justify">
                         Our internships provide real-world experience and the opportunity to work on industry-relevant projects.
                     </p>
-                    <a href="/frontend/internships.html" class="text-[#EE1C25] hover:text-[#0065BD] font-semibold">Learn More</a>
+                    <a href="/public/internships.html" class="text-[#EE1C25] hover:text-[#0065BD] font-semibold">Learn More</a>
                 </div>
     
                 <!-- Workshops -->
@@ -335,7 +349,7 @@
                     <p class="text-gray-700 mb-4 text-justify">
                         Our interactive workshops are designed to build practical skills and foster collaboration among participants.
                     </p>
-                    <a href="/frontend/workshops.html" class="text-[#EE1C25] hover:text-[#0065BD] font-semibold">Learn More</a>
+                    <a href="/public/workshops.html" class="text-[#EE1C25] hover:text-[#0065BD] font-semibold">Learn More</a>
                 </div>
     
                 <!-- Projects -->
@@ -344,7 +358,7 @@
                     <p class="text-gray-700 mb-4 text-justify">
                         Get hands-on experience by working on innovative projects that make a real impact in the community.
                     </p>
-                    <a href="/frontend/projects.html" class="text-[#EE1C25] hover:text-[#0065BD] font-semibold">Learn More</a>
+                    <a href="/public/projects.html" class="text-[#EE1C25] hover:text-[#0065BD] font-semibold">Learn More</a>
                 </div>
             </div>
         </div>
@@ -416,11 +430,11 @@
             <div>
                 <h3 class="text-xl font-semibold mb-4">Quick Links</h3>
                 <ul> 
-                    <li><a href="/frontend/index.html" class="hover:text-[#EE1C25]">Home</a></li>
-                    <li><a href="/frontend/aboutus.html" class="hover:text-[#EE1C25]">About Us</a></li>
-                    <li><a href="/frontend/internships.html" class="hover:text-[#EE1C25]">Internships</a></li>
-                    <li><a href="/frontend/courses.html" class="hover:text-[#EE1C25]">Courses</a></li>
-                    <li><a href="/frontend/projects.html" class="hover:text-[#EE1C25]">Projects</a></li>
+                    <li><a href="/public/homepage.html" class="hover:text-[#EE1C25]">Home</a></li>
+                    <li><a href="/public/aboutus.html" class="hover:text-[#EE1C25]">About Us</a></li>
+                    <li><a href="/public/internships.html" class="hover:text-[#EE1C25]">Internships</a></li>
+                    <li><a href="/public/courses.html" class="hover:text-[#EE1C25]">Courses</a></li>
+                    <li><a href="/public/projects.html" class="hover:text-[#EE1C25]">Projects</a></li>
                     <li><a href="/contact" class="hover:text-[#EE1C25]">Contact Us</a></li>
                     <li><a href="/privacy-policy" class="hover:text-[#EE1C25]">Privacy Policy</a></li>
                     <li><a href="/terms-of-service" class="hover:text-[#EE1C25]">Terms & Conditions</a></li>
@@ -432,7 +446,7 @@
 
         <!-- Copyright -->
         <div class="text-center mt-8">
-            <p>&copy; 2025 <a href="/frontend/index.html" class="text-[#EE1C25]">Orion Grid</a>. All Rights Reserved.</p>
+            <p>&copy; 2025 <a href="/public/index.html" class="text-[#EE1C25]">Orion Grid</a>. All Rights Reserved.</p>
         </div>
     </footer>
 
